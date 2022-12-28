@@ -41,4 +41,5 @@ mlp = MLPClassifier(hidden_layer_sizes=(10,), activation='logistic', \
                     learning_rate_init=0.1, max_iter=500)
 
 mlp.fit(x_train_scaled, y_train)
-print(mlp.score(x_val_scaled, y_val))
+
+print(f"CLassifier Score : {mlp.score(x_val_scaled, y_val)}")
