@@ -36,8 +36,8 @@ scaler.fit(x_train)
 x_train_scaled = scaler.transform(x_train)  # standard preprocessing
 x_val_scaled = scaler.transform(x_val)
 
-mlp = MLPClassifier(hidden_layer_sizes=(10,), activation='logistic', \
-                    solver='sgd', alpha=0.01, batch_size=2, \
+mlp = MLPClassifier(hidden_layer_sizes=(10,10), activation='logistic', \
+                    solver='adam', alpha=0.005, batch_size=32, \
                     learning_rate_init=0.1, max_iter=500)
 
 mlp.fit(x_train_scaled, y_train)
